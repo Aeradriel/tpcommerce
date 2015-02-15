@@ -1,0 +1,4 @@
+<h1>Donation Website</h1>
+<%= link_to 'Donate', controller: :donations, action: :new %>
+<%= link_to 'View donations list', controller: :donations, action: :index %>
+<%= link_to 'Disconnect', destroy_user_session_path, method: :delete %>
