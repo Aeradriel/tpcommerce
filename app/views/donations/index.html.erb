@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Donations</h1>
+<div class="panel panel-primary p5">
+  <div class="panel-heading">
+    <h1 class="text-left header-title">Listing Donations</h1>
+  </div>
 
-<table>
+  <%= link_to 'New Donation', new_donation_path, class: "btn btn-success btn-add" %>
+  <table class="table">
   <thead>
     <tr>
       <th>Montant</th>
-      <th>Date</th>
-      <th>User</th>
+      <th><%= link_to 'Date', order: :date %></th>
+      <th><%= link_to 'User', order: :user %></th>
       <th>Mode paiement</th>
       <th colspan="3"></th>
     </tr>
@@ -20,17 +24,14 @@
         <td><%= donation.date.localtime %></td>
         <td><%= donation.user.email %></td>
         <td><%= donation.mode_paiement %></td>
-        <td><%= link_to 'Show', donation %></td>
-        <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
-        <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', donation , class: 'btn btn-success' %></td>
+        <td><%= link_to 'Edit', edit_donation_path(donation), class: 'btn btn-warning'%></td>
+        <td><%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Attention, cela est irreversible' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
 
-<%= link_to 'Order by user', order: :user %><br/>
-<%= link_to 'Order by date', order: :date %><br/>
 
-<%= link_to 'New Donation', new_donation_path %>

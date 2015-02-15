@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+
+.header-title {
+  width: 300px;
+
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.donate {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.p5 {
+  padding: 5px;
+}
+
+.btn-add {
+  margin: 15px;
+}

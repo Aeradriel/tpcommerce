@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   authenticate :user do
-    root 'home#index', as: 'authenticated_root'
+    root 'donations#index', as: 'authenticated_root'
   end
 
   unauthenticated :user do
