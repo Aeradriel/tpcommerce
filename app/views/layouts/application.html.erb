@@ -3,6 +3,7 @@
 <head>
   <title>DonationWebsite</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
 </head>
@@ -18,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Donation Website</a>
+      <a class="navbar-brand" href="/">Donation Website</a>
     </div>
     <% if user_signed_in? %>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

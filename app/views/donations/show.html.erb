@@ -14,7 +14,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @donation.user %>
+  <%= @donation.user.email %>
 </p>
 
 <p>
@@ -22,6 +22,6 @@
   <%= @donation.mode_paiement %>
 </p>
 
-<%= link_to 'Edit', edit_donation_path(@donation), :class => "btn btn-success" %> |
+<%= link_to 'Edit', edit_donation_path(@donation), :class => "btn btn-success" %>
 <%= link_to 'Back', donations_path, :class => "btn btn-default"%>
 </div>
